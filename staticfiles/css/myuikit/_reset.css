@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+	color: inherit;
+}
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+html {
+	color-scheme: dark light;
+}
+
+/* Images and Videos */
+img,
+picture,
+svg,
+video,
+canvas {
+	display: block;
+	max-width: 100%;
+}
+
+/* Texts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+p,
+li,
+figcaption {
+	text-wrap: pretty;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+	background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

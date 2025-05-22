@@ -1,0 +1,215 @@
+.login_page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.form-wrapper {
+	width: 720px;
+	overflow: auto;
+	height: calc(100vh - calc(200rem / 16));
+	background-color: var(--card-bg);
+	border: 2px solid var(--brdr-color);
+
+	padding: calc(20rem / 16) calc(40rem / 16);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+}
+
+.form-wrapper::-webkit-scrollbar {
+	width: 4px;
+}
+
+.form-wrapper::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color-1);
+	border-radius: 10px;
+	background-clip: padding-box;
+}
+
+.form-wrapper h2 {
+	color: var(--white-color);
+
+	text-align: center;
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 1.25rem;
+}
+
+.form-wrapper form > .input-wrapper,
+.form-wrapper form > .radiobox-wrapper {
+	margin-block: calc(20rem / 16);
+}
+
+.form-wrapper form > .input-wrapper .inline,
+.form-wrapper form > .radiobox-wrapper .inline {
+	display: flex;
+	align-items: start;
+}
+
+.form-wrapper form > .input-wrapper label,
+.form-wrapper form > .radiobox-wrapper p {
+	width: 30%;
+	color: var(--txt-color);
+
+	font-size: calc(16rem / 16);
+	font-weight: 500;
+}
+
+.form-wrapper form input,
+.form-wrapper form select,
+.form-wrapper form textarea,
+.form-wrapper form input[type="file"] {
+	height: 2.5rem;
+	width: 100%;
+}
+
+.form-wrapper form input,
+.form-wrapper form select,
+.form-wrapper form textarea {
+	color: var(--muted-color);
+	background: var(--input-bg);
+	font-size: calc(16rem / 16);
+
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	padding: 8px 16px;
+}
+
+.form-wrapper form input:focus,
+.form-wrapper form select:focus,
+.form-wrapper form textarea:focus {
+	outline: none;
+	color: var(--txt-color);
+	background-color: var(--input-fcs);
+	border: 2px solid var(--brdr-color);
+}
+
+.form-wrapper form input.error,
+.form-wrapper form select.error,
+.form-wrapper form textarea.error {
+	color: var(--color-danger-2);
+	border: 2px solid var(--color-danger-2);
+}
+
+.form-wrapper form input.error:focus,
+.form-wrapper form select.error:focus,
+.form-wrapper form textarea.error:focus {
+	color: var(--text-color);
+}
+
+.form-wrapper form input.error::placeholder,
+.form-wrapper form select.error::placeholder,
+.form-wrapper form textarea.error::placeholder {
+	color: var(--color-danger-1);
+}
+
+.form-wrapper form textarea {
+	resize: none;
+	height: calc(160rem / 16);
+}
+
+.form-wrapper form select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 0.75rem center;
+}
+
+.form-wrapper form select.open {
+	background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='18 15 12 9 6 15'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.form-wrapper form select option:checked {
+	color: var(--text-color);
+	background-color: var(--primary-color-1);
+}
+
+.form-wrapper form .options-wrapper {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+}
+
+.form-wrapper form .radiobox-wrapper .input-wrapper {
+	display: grid;
+	grid-template-columns: 25% auto;
+	padding-block: 0.125rem;
+
+	width: 100%;
+	font-size: 1rem;
+	line-height: 1.1;
+}
+
+.form-wrapper form input[type="radio"],
+.form-wrapper form input[type="checkbox"] {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+	font: inherit;
+	height: 0.5rem;
+	width: 0.5rem;
+	transform: translateY(-0.075em);
+	padding: 0.5rem;
+	display: grid;
+	place-content: center;
+	border-radius: 0.125rem;
+	background-color: var(--input-bg);
+	border: 0.15rem solid var(--brdr-color);
+}
+
+.form-wrapper form input[type="radio"]::before,
+.form-wrapper form input[type="checkbox"]::before {
+	content: "";
+	width: 1rem;
+	height: 1rem;
+	border-radius: 0.125rem;
+	transform: scale(0);
+	transition: 120ms transform ease-in-out;
+	box-shadow: inset 1em 1em var(--form-control-color);
+	background-color: CanvasText;
+}
+
+.form-wrapper form input[type="radio"]:checked::before,
+.form-wrapper form input[type="checkbox"]:checked::before {
+	background-color: var(--primary-color-1);
+	transform: scale(1);
+}
+
+.form-wrapper form input[type="radio"],
+.form-wrapper form input[type="radio"]::before {
+	border-radius: 50%;
+}
+
+.form-wrapper form p.error-text {
+	margin-left: 23%;
+	color: var(--color-danger-2);
+	font-size: calc(13rem / 16);
+	font-weight: 400;
+	padding-top: 4px;
+}
+
+.form-wrapper form .form-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	gap: 12px;
+}
+
+.form-wrapper form .form-buttons .button {
+	width: calc(96rem / 16);
+	font-size: calc(14rem / 16);
+	font-weight: 500;
+}
+
+.form-wrapper form .form-buttons .button.cancel {
+	background-color: var(--color-danger-2);
+}
+
+.form-wrapper form .form-buttons .button.cancel:hover {
+	background-color: var(--color-danger-2);
+}

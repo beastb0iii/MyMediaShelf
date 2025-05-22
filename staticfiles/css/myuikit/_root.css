@@ -1,0 +1,24 @@
+:root {
+	--primary-color-1: hsl(269, 57%, 53%);
+	--primary-color-2: hsl(269, 57%, 60%);
+
+	--secondary-color-1: #ff7124;
+
+	--navbar-bg: #010409;
+	--body-bg: #141318;
+	--card-bg: #171b20;
+	--brdr-color: #42474d;
+
+	--input-bg: #23262d;
+	--input-fcs: #343841;
+
+	--text-color: #e6e9eb;
+
+	--white-color: #fff;
+	--muted-color: #828b94;
+	--color-danger-1: #f44336;
+	--color-danger-2: #ff5252;
+	--color-danger-3: #ff8a80;
+
+	--bx-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

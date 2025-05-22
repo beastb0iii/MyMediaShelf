@@ -1,0 +1,55 @@
+/* Container */
+.container {
+	width: 92%;
+	max-width: 165rem;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.container-narrow {
+	width: 92%;
+	max-width: 120rem;
+}
+
+@media screen and (min-width: 1000px) {
+	.container {
+		width: 90%;
+	}
+
+	.container-narrow {
+		width: 85%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.container {
+		width: 80%;
+	}
+
+	.container-narrow {
+		width: 72%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.container {
+		width: 72%;
+	}
+
+	.container-narrow {
+		width: 65%;
+	}
+}
+
+.button {
+	color: var(--text-color);
+	background-color: var(--primary-color-1);
+	padding: 8px 16px;
+	border-radius: 4px;
+	font-size: calc(16rem / 16);
+	text-align: center;
+}
+
+.button:hover {
+	background-color: var(--primary-color-2);
+}
