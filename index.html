@@ -70,7 +70,7 @@
 				<input type="text" placeholder="Search..." class="search-bar" />
 
 				<div class="header-actions">
-					<button><i class="bx bxs-plus"></i></button>
+					<button id="addMediaItem"><i class="bx bxs-plus"></i></button>
 					<img src="staticfiles/img/p2p.jpg" alt="" class="profile" />
 				</div>
 			</section>
@@ -84,73 +84,35 @@
 						</span>
 						<div>
 							<h3>Very Long Title Lord of the Rings Season 1</h3>
-							<p>Peter Jackson</p>
+							<p>A Very Long Title of Media Owner</p>
 						</div>
 					</div>
 				</div>
 
-				<div class="media-item">
-					<img src="staticfiles/img/LordoftheRings.jpeg" alt="Series Title" />
-					<div class="media-info">
-						<span class="media-action">
-							<i class="bx bx-movie"></i>
-						</span>
-						<div>
-							<h3>Lord of the Rings</h3>
-							<p>Peter Jackson</p>
+				<div id="addModal" class="modal-overlay">
+					<div class="modal">
+						<div class="modal-header">
+							<h3 class="modal-title">Add Media</h3>
+							<button id="closeModalBtn" class="modal-close">
+								<i class="bx bx-x"></i>
+							</button>
 						</div>
-					</div>
-				</div>
 
-				<div class="media-item">
-					<img src="staticfiles/img/Dark Souls.png" alt="Series Title" />
-					<div class="media-info">
-						<span class="media-action">
-							<i class="bx bx-joystick"></i>
-						</span>
-						<div>
-							<h3>Dark Souls</h3>
-							<p>FromSoftGames</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="media-item">
-					<img src="staticfiles/img/Stoner by John Williams.jfif" alt="Series Title" />
-					<div class="media-info">
-						<span class="media-action">
-							<i class="bx bx-book"></i>
-						</span>
-						<div>
-							<h3>The Stoner</h3>
-							<p>John Williams</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="media-item">
-					<img src="staticfiles/img/Crime and Punishment by Fyodor Dostoevsky.jpg" alt="Series Title" />
-					<div class="media-info">
-						<span class="media-action">
-							<i class="bx bx-book"></i>
-						</span>
-						<div>
-							<h3>Crime and Punishment</h3>
-							<p>Fyodor Dostoevsky</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="media-item">
-					<img src="staticfiles/img/Helldivers II.png" alt="Series Title" />
-					<div class="media-info">
-						<span class="media-action">
-							<i class="bx bx-joystick"></i>
-						</span>
-						<div>
-							<h3>Helldivers II</h3>
-							<p>Try for long Arrowhead Game Studios</p>
-						</div>
+						<form class="modal-form">
+							<div class="input-wrapper">
+								<div class="">
+									<label for="name">Name:</label>
+									<input type="text" />
+								</div>
+							</div>
+							<div class="input-wrapper">
+								<div class="">
+									<label for="name">Description:</label>
+									<textarea name="" id=""></textarea>
+								</div>
+							</div>
+							<button type="submit" class="submit-btn">Add</button>
+						</form>
 					</div>
 				</div>
 			</section>
